@@ -35,6 +35,7 @@
       background-color: #84592B;
       border-radius: 8px;
       transition: background-color 0.3s;
+      cursor: pointer;
     }
     nav a:hover {
       background-color: #A06C33;
@@ -87,6 +88,7 @@
       border-radius: 8px;
       margin: 0.2rem;
       cursor: pointer;
+      font-size: 1rem;
     }
     input, textarea {
       width: 100%;
@@ -94,9 +96,26 @@
       margin-top: 0.5rem;
       border-radius: 8px;
       border: 1px solid #ccc;
+      font-size: 1rem;
     }
     .comments {
       margin-top: 1rem;
+      max-height: 200px;
+      overflow-y: auto;
+      background: #FFF9EA;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .gallery img, .gift img, .fashion img {
+        width: 100%;
+        margin: 5px 0;
+      }
     }
   </style>
 </head>
@@ -104,16 +123,16 @@
   <header>Ela ❤️ Pedro Pascal</header>
 
   <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('gallery')">Gallery</a>
-    <a href="#" onclick="showSection('quiz')">Quiz</a>
-    <a href="#" onclick="showSection('video')">Video</a>
-    <a href="#" onclick="showSection('love')">Love Message</a>
-    <a href="#" onclick="showSection('fashion')">Fashion Show</a>
-    <a href="#" onclick="showSection('wedding')">Wedding Hall</a>
-    <a href="#" onclick="showSection('gifts')">Gifts</a>
-    <a href="#" onclick="showSection('quotes')">Pedro Says ...</a>
-    <a href="#" onclick="showSection('guestbook')">Guestbook</a>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('gallery')">Gallery</a>
+    <a onclick="showSection('quiz')">Quiz</a>
+    <a onclick="showSection('video')">Video</a>
+    <a onclick="showSection('love')">Love Message</a>
+    <a onclick="showSection('fashion')">Fashion Show</a>
+    <a onclick="showSection('wedding')">Wedding Hall</a>
+    <a onclick="showSection('gifts')">Gifts</a>
+    <a onclick="showSection('quotes')">Pedro Says ...</a>
+    <a onclick="showSection('guestbook')">Guestbook</a>
   </nav>
 
   <section id="home" class="active">
@@ -176,30 +195,30 @@
       <p>7. What did Pedro study before becoming an actor?</p>
       <button onclick="checkAnswer(this, false)">Computer Science</button>
       <button onclick="checkAnswer(this, true)">Art</button>
-      <div class="quiz-question">
+    </div>
+    <div class="quiz-question">
       <p>8. What is Pedro Pascal's birth year?</p>
       <button onclick="checkAnswer(this, true)">1975</button>
       <button onclick="checkAnswer(this, false)">1983</button>
-    </div>
     </div>
     <p id="result"></p>
     <audio id="correctSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
     <audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
   </section>
 
-<section id="video">
-  <h2>Pedro Video Links 🎬</h2>
-  <div class="cinema">
-    <p>Click on a video below to watch Pedro in action:</p>
-    <ul style="list-style: none; padding: 0;">
-      <li><a href="https://www.youtube.com/watch?v=LLLZniyBMcU">📹 Video 1: Pedro says hi!</a></li>
-      <li><a href="https://www.youtube.com/watch?v=cnwmgMGbDsg">📹 Video 2: Pedro's best moments</a></li>
-      <li><a href="https://vm.tiktok.com/ZNdPC2QQr/">📹 Video 3: A love message just for you ❤️</a></li>
-      <li><a href="https://vm.tiktok.com/ZNdPCfct8/">📹 Video 4: A love message just for you ❤️</a></li>
-      <li><a href="https://vm.tiktok.com/ZNdPC4Gwh/">📹 Video 5: A love message just for you ❤️</a></li>
-    </ul>
-  </div>
-</section>
+  <section id="video">
+    <h2>Pedro Video Links 🎬</h2>
+    <div class="cinema">
+      <p>Click on a video below to watch Pedro in action:</p>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://www.youtube.com/watch?v=LLLZniyBMcU" target="_blank" rel="noopener">📹 Video 1: Pedro says hi!</a></li>
+        <li><a href="https://www.youtube.com/watch?v=cnwmgMGbDsg" target="_blank" rel="noopener">📹 Video 2: Pedro's best moments</a></li>
+        <li><a href="https://vm.tiktok.com/ZNdPC2QQr/" target="_blank" rel="noopener">📹 Video 3: A love message just for you ❤️</a></li>
+        <li><a href="https://vm.tiktok.com/ZNdPCfct8/" target="_blank" rel="noopener">📹 Video 4: A love message just for you ❤️</a></li>
+        <li><a href="https://vm.tiktok.com/ZNdPC4Gwh/" target="_blank" rel="noopener">📹 Video 5: A love message just for you ❤️</a></li>
+      </ul>
+    </div>
+  </section>
   
   <section id="love">
     <h2>Pedro tells you something ... 💌</h2>
@@ -267,6 +286,7 @@
     function showSection(id) {
       document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
     }
 
     let score = 0;
@@ -277,27 +297,51 @@
       if (correct) {
         score++;
         document.getElementById("correctSound").play();
+        btn.style.backgroundColor = '#4CAF50'; // green
       } else {
         document.getElementById("wrongSound").play();
+        btn.style.backgroundColor = '#F44336'; // red
       }
       answered++;
       if (answered === 8) {
         document.getElementById("result").textContent = `You answered ${score} out of 8 questions correctly!`;
-        score = 0;
-        answered = 0;
+        // Reset buttons after a short delay so user can see colors
+        setTimeout(() => {
+          score = 0;
+          answered = 0;
+          document.getElementById("result").textContent = "";
+          document.querySelectorAll('.quiz-question button').forEach(b => {
+            b.classList.remove('answered');
+            b.style.backgroundColor = '#84592B';
+          });
+        }, 4000);
       }
     }
 
     function addComment(event) {
       event.preventDefault();
-      const name = document.getElementById("name").value;
-      const message = document.getElementById("message").value;
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+      if(!name || !message) return;
       const container = document.getElementById("comments");
       const entry = document.createElement("div");
-      entry.innerHTML = `<strong>${name}</strong>: ${message}`;
+      entry.style.marginBottom = "0.7rem";
+      entry.innerHTML = `<strong>${escapeHtml(name)}</strong>: ${escapeHtml(message)}`;
       container.appendChild(entry);
       document.getElementById("name").value = "";
       document.getElementById("message").value = "";
+    }
+
+    // Simple escape to prevent HTML injection in guestbook
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, function(m) { return map[m]; });
     }
 
     function showLoveMessage() {
