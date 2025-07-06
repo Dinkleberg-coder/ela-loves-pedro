@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ela loves Pedro Pascal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #E8D1A7;
+      color: #3E2F1C;
+    }
+    header {
+      background-color: #9D9167;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #F5E3BA;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #84592B;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #A06C33;
+    }
+    section {
+      padding: 2rem;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .gallery img, .gift img, .fashion img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .quiz-question {
+      margin-bottom: 1rem;
+    }
+    .quiz-question p {
+      margin-bottom: 0.5rem;
+    }
+    .wedding-room, .gift, .cinema, .love, .fashion, .quotes {
+      padding: 1rem;
+      background: #FFF9EA;
+      border: 2px dashed #9D9167;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #9D9167;
+      color: white;
+      margin-top: 2rem;
+    }
+    button {
+      background-color: #84592B;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin: 0.2rem;
+      cursor: pointer;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .comments {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Ela ❤️ Pedro Pascal</header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('gallery')">Gallery</a>
+    <a href="#" onclick="showSection('quiz')">Quiz</a>
+    <a href="#" onclick="showSection('video')">Video</a>
+    <a href="#" onclick="showSection('love')">Love Message</a>
+    <a href="#" onclick="showSection('fashion')">Fashion Show</a>
+    <a href="#" onclick="showSection('wedding')">Wedding Hall</a>
+    <a href="#" onclick="showSection('gifts')">Gifts</a>
+    <a href="#" onclick="showSection('quotes')">Pedro Says ...</a>
+    <a href="#" onclick="showSection('guestbook')">Guestbook</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome, Ela!</h2>
+    <p>This site was lovingly created by Angelina and Lucas for you – so you can feel closer to Pedro than ever before 😍</p>
+    <img src="https://www.stuttgarter-nachrichten.de/media.media.703e7f9b-55af-412b-be5e-6bdc1825f45f.16x9_700.jpg" alt="Pedro Pascal" />
+  </section>
+
+  <section id="gallery">
+    <h2>Pedro Gallery</h2>
+    <div class="gallery">
+      <img src="https://static05.galaxus.com/im/Files/7/5/4/7/5/2/7/1/pedro_pascal_fantastic_four_reed_richards_digitec_web21.png?impolicy=teaser&resizeWidth=700&resizeHeight=350" alt="Pedro 1" />
+      <img src="https://static.wikia.nocookie.net/dc-cinematic-universe/images/9/9c/Pedro_Pascal_Box.jpeg/revision/latest?cb=20230402093623&path-prefix=de" alt="Pedro 2" />
+      <img src="https://preview.redd.it/is-pedro-pascal-officially-confirmed-as-reed-richards-or-is-v0-4qe0aeg0g52c1.jpg?width=640&crop=smart&auto=webp&s=e8fcc1198cda14f3c16afe34272f7c041a1b833e" alt="Pedro 3" />
+      <img src="https://static.wikia.nocookie.net/jedipedia/images/0/00/Din_Djarin_%28Vanity_Fair%29.png/revision/latest?cb=20220519080604&path-prefix=de" alt="Pedro 4" />
+      <img src="https://www.out.com/media-library/pedro-pascal-as-joel-miller-in-the-last-of-us-episode-9.jpg?id=59997879&width=1200&height=1200&coordinates=272%2C0%2C273%2C0" alt="Pedro 5" />
+      <img src="https://media.gq-magazin.de/photos/5f55f5a545b0445c31810794/16:9/w_2560%2Cc_limit/evt-pedro-pascal-aufm.jpg" alt="Pedro 6" />
+      <img src="https://photos.desired.de/96/dd/c2/709b63f16ff04bcb03241371af_ZmMgNjczNjVkODlmZmZmIDEyMDAgMTIwMAM5ZDdiZmY0YjIzYQ==_imago168075639.jpg" alt="Pedro 7" />
+      <img src="https://cdn-a.prisma.de/cdn/img/default/4354/43537941_fb75351700efd1929b4dafc9c12e8657_480re0.jpg" alt="Pedro 8" />
+      <img src="https://images.t-online.de/2025/04/1VGWBMsGLK-2/0x167:3200x1800/fit-in/1920x0/premiere-von-thunderbolts-pedro-pascal-auf-dem-roten-teppich-in-london.jpg" alt="Pedro 9" />
+      <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1HBzBE.img?w=768&h=432&m=6&x=341&y=131&s=376&d=376" alt="Pedro 10" />
+      <img src="https://c.ndtvimg.com/2025-06/t6pmtfrc_pedro-pascal_625x300_13_June_25.jpg?im=FeatureCrop,algorithm=dnn,width=545,height=307" alt="Pedro 11" />
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgRZjfU57EdBy9bR9L5e6bIJu3E4uqy8AGdE789mBeWODp_uldv8gvdBN6UGFsDJ7sTbs&usqp=CAU" alt="Pedro 12" />
+  </section>
+
+  <section id="quiz">
+    <h2>Pedro Quiz</h2>
+    <div class="quiz-question">
+      <p>1. What is Pedro Pascal's full birth name?</p>
+      <button onclick="checkAnswer(this, true)">José Pedro Balmaceda Pascal</button>
+      <button onclick="checkAnswer(this, false)">Pedro Pascal Ramirez</button>
+    </div>
+    <div class="quiz-question">
+      <p>2. Where was Pedro born?</p>
+      <button onclick="checkAnswer(this, false)">Madrid, Spain</button>
+      <button onclick="checkAnswer(this, true)">Santiago, Chile</button>
+    </div>
+    <div class="quiz-question">
+      <p>3. In which series did he play Oberyn Martell?</p>
+      <button onclick="checkAnswer(this, true)">Game of Thrones</button>
+      <button onclick="checkAnswer(this, false)">Breaking Bad</button>
+    </div>
+    <div class="quiz-question">
+      <p>4. Which character does he voice in The Mandalorian?</p>
+      <button onclick="checkAnswer(this, true)">Din Djarin</button>
+      <button onclick="checkAnswer(this, false)">Boba Fett</button>
+    </div>
+    <div class="quiz-question">
+      <p>5. In which series does Pedro Pascal play the role of Joel?</p>
+      <button onclick="checkAnswer(this, false)">Stranger Things</button>
+      <button onclick="checkAnswer(this, true)">The Last of Us</button>
+    </div>
+    <div class="quiz-question">
+      <p>6. Which language does Pedro speak besides English?</p>
+      <button onclick="checkAnswer(this, true)">Spanish</button>
+      <button onclick="checkAnswer(this, false)">Italian</button>
+    </div>
+    <div class="quiz-question">
+      <p>7. What did Pedro study before becoming an actor?</p>
+      <button onclick="checkAnswer(this, false)">Computer Science</button>
+      <button onclick="checkAnswer(this, true)">Art</button>
+      <div class="quiz-question">
+      <p>8. What is Pedro Pascal's birth year?</p>
+      <button onclick="checkAnswer(this, true)">1975</button>
+      <button onclick="checkAnswer(this, false)">1983</button>
+    </div>
+    </div>
+    <p id="result"></p>
+    <audio id="correctSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+    <audio id="wrongSound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+  </section>
+
+  <section id="video">
+    <h2>Pedro Video</h2>
+    <iframe width="100%" height="315" src="" title="Pedro Pascal" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="love">
+    <h2>Pedro tells you something ... 💌</h2>
+    <div class="love">
+      <p id="loveMessage">Click below to receive your daily love message 💖</p>
+      <button onclick="showLoveMessage()">Say something, Pedro!</button>
+    </div>
+  </section>
+
+  <section id="fashion">
+    <h2>Pedro's Fashion Show 👔</h2>
+    <div class="fashion">
+      <p>Here are his best outfits</p>
+      <img src="outfit1.jpg" alt="Outfit 1" />
+      <img src="outfit2.jpg" alt="Outfit 2" />
+    </div>
+  </section>
+
+  <section id="wedding">
+    <h2>Wedding Hall</h2>
+    <div class="wedding-room">
+      <p>Welcome to the wedding of Ela & Pedro 💍</p>
+      <p>🥂 May your love be as epic as a series finale!</p>
+      <img src="hochzeit.jpg" alt="Pedro Wedding" style="width: 300px; border-radius: 12px; margin-top: 1rem;" />
+    </div>
+  </section>
+
+  <section id="gifts">
+    <h2>Virtual Gifts 🎁</h2>
+    <div class="gift">
+      <p>A golden heart just for you ❤️</p>
+      <img src="geschenk1.jpg" alt="Golden Heart" />
+      <p>Pedro sends you chocolate 🍫</p>
+      <img src="geschenk2.jpg" alt="Chocolate" />
+    </div>
+  </section>
+
+  <section id="quotes">
+    <h2>Pedro says ... 💬</h2>
+    <div class="quotes">
+      <p id="quote">Click for a Pedro quote!</p>
+      <button onclick="randomQuote()">🎤 Another one!</button>
+    </div>
+  </section>
+
+  <section id="guestbook">
+    <h2>Guestbook</h2>
+    <form onsubmit="addComment(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="comments" id="comments"></div>
+  </section>
+
+  <footer>
+    Created with love by Angelina and Lucas ❤️
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    let score = 0;
+    let answered = 0;
+    function checkAnswer(btn, correct) {
+      if (btn.classList.contains("answered")) return;
+      btn.classList.add("answered");
+      if (correct) {
+        score++;
+        document.getElementById("correctSound").play();
+      } else {
+        document.getElementById("wrongSound").play();
+      }
+      answered++;
+      if (answered === 8) {
+        document.getElementById("result").textContent = `You answered ${score} out of 8 questions correctly!`;
+        score = 0;
+        answered = 0;
+      }
+    }
+
+    function addComment(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+      const container = document.getElementById("comments");
+      const entry = document.createElement("div");
+      entry.innerHTML = `<strong>${name}</strong>: ${message}`;
+      container.appendChild(entry);
+      document.getElementById("name").value = "";
+      document.getElementById("message").value = "";
+    }
+
+    function showLoveMessage() {
+      const messages = [
+        "I've never seen anyone like you, Ela...",
+        "If looks could kill – I'd be dead from love!",
+        "Pedro loves you from here to Chile",
+        "Would you marry me, Ela? Right now?",
+        "Ela, every time I think of you, my heart gets heavy - with longing. And light - with love.",
+        "I've played many roles, but none more beautiful than being your admirer.",
+        "When I look at you, I forget shooting schedules, cameras, and the whole world. You are my movie.",
+        "I'd film a thousand series just to see you laugh one moment longer.",
+        "I've wandered deserts, traveled galaxies - but only with you do I find home.",
+        "No script in the world can describe how unique you are, Ela."
+      ];
+      const random = Math.floor(Math.random() * messages.length);
+      document.getElementById('loveMessage').textContent = messages[random];
+    }
+
+    function randomQuote() {
+      const quotes = [
+        "I'm not a hero – I'm Ela's hero.",
+        "Chocolate is sweet, but Ela is sweeter.",
+        "I make series – but Ela makes my life a movie.",
+        "Who needs Emmy Awards when you have Ela?",
+        "My heart carries golden letters: E-L-A.",
+        "I thought I'd seen everything – until I saw your smile.",
+        "Your eyes sparkle brighter than any camera shot, Ela.",
+        "In a world full of roles, you are my only truth.",
+        "I don't need a script when you're in my life – we improvise love.",
+        "I'm an actor. But with you, I'm not acting. I'm feeling."
+      ];
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = quotes[random];
+    }
+  </script>
+</body>
+</html>
